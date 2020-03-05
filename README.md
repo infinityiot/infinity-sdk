@@ -30,7 +30,7 @@ or using Gradle:
 
 Minimum Ansroid SDK 19+.
 
-Example of using the Infinity SDK
+The simplest example of using the Infinity SDK
 --------
 1. Initializate the SDK
 ```java
@@ -41,20 +41,20 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ...
-        sdk = new InfinitySDK(this, <init callback if needed or null>);
+        sdk = new InfinitySDK(this, null);
     }
 ```
 1. Run a command
 ```java
     public void onButtonClick(View view) {
-        sdk.commands.setAirplaneModeEnabled(false, <command callback if needed or null>);
+        sdk.commands.setAirplaneModeEnabled(false, null);
     }
 ```
 Commands
 --------
 * `setAirplaneModeEnabled`: Turn Airplane mode on or off.  
      * param value `true` to on, `false` to off
-     * param cb `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not
+     * param cb `null` or `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not
 
 License
 =======
