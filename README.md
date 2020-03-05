@@ -9,7 +9,7 @@ For more information please see [the website][site].
 Download
 --------
 
-Download [the latest AAR][link] or add a dependency using Gradle `implementation 'com.github.infinityiot:infinity-sdk:1.+'`.
+Download [the latest library][link] or add a dependency using Gradle `implementation 'com.github.infinityiot:infinity-sdk:1.+'`.
 
 Minimum Ansroid SDK 19+.
 
