@@ -24,7 +24,7 @@ or using Gradle:
 2. add the dependency:
 ```
     dependencies {
-	    com.github.infinityiot:infinity-sdk:1.0.0-alpha.1'
+	    implementation 'com.github.infinityiot:infinity-sdk:1.0.0-alpha.1'
 	}
 ```
 
