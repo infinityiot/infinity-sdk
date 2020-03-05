@@ -9,9 +9,52 @@ For more information please see [the website][site].
 Download
 --------
 
-Download [the latest library][link] or add a dependency using Gradle `implementation 'com.github.infinityiot:infinity-sdk:1.+'`.
+Download [the latest library][link]
+
+or using Gradle:
+1. add the repository:
+```GDL
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+``` 
+1. add the dependency:
+```
+    dependencies {
+	    com.github.infinityiot:infinity-sdk:1.0.0-alpha.1'
+	}
+```
 
 Minimum Ansroid SDK 19+.
+
+Example of using the Infinity SDK
+--------
+1. Initializate the SDK
+```java
+public class MainActivity extends Activity {
+
+    InfinitySDK sdk = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        ...
+        sdk = new InfinitySDK(this, <init callback if needed or null>);
+    }
+```
+1. Run a command
+```java
+    public void onButtonClick(View view) {
+        sdk.commands.setAirplaneModeEnabled(false, <command callback if needed or null>);
+    }
+```
+Commands
+--------
+* `setAirplaneModeEnabled`: Turn Airplane mode on or off.  
+     * param value `true` to on, `false` to off
+     * param cb `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not
 
 License
 =======
