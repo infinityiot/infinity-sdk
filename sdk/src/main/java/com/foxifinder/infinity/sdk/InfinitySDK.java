@@ -67,18 +67,18 @@ public final class InfinitySDK {
         initSDK();
     }
 
-    /**
-     * sync constructor
-     * @param context
-     */
-    public InfinitySDK(Context context) throws Exception {
-        this(context.getApplicationContext(), null);
-
-        mInitCompletedSignal.await(INIT_TIMEOUT, TimeUnit.MILLISECONDS);
-        if (mServiceConnection == null) {
-            throw new Exception("Infinity SDK init error");
-        }
-    }
+//    /**
+//     * sync constructor
+//     * @param context
+//     */
+//    public InfinitySDK(Context context) throws Exception {
+//        this(context.getApplicationContext(), null);
+//
+//        mInitCompletedSignal.await(INIT_TIMEOUT, TimeUnit.MILLISECONDS);
+//        if (mServiceConnection == null) {
+//            throw new Exception("Infinity SDK init error");
+//        }
+//    }
 
     private void initSDK() {
         Connection connection = new Connection();
