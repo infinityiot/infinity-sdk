@@ -28,7 +28,7 @@ or using Gradle:
 	}
 ```
 
-Minimum Ansroid SDK 19+.
+Minimum Android SDK 19+.
 
 The simplest example of using the Infinity SDK
 --------
