@@ -21,7 +21,7 @@ or using Gradle:
 		}
 	}
 ``` 
-1. add the dependency:
+2. add the dependency:
 ```
     dependencies {
 	    com.github.infinityiot:infinity-sdk:1.0.0-alpha.1'
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         sdk = new InfinitySDK(this, null);
     }
 ```
-1. Run a command
+2. Run a command
 ```java
     public void onButtonClick(View view) {
         sdk.commands.setAirplaneModeEnabled(false, null);
