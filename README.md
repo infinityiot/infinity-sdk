@@ -51,11 +51,20 @@ public class MainActivity extends Activity {
     }
 ```
 Commands
---------
+-------
 * `setAirplaneModeEnabled`: Turn Airplane mode on or off.  
      * param value `true` to on, `false` to off
      * param cb `null` or `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not
+Commands use the next callback inteface:
+-------
+* `InfinitySDK.CommandCallback`- Infinity callback interface. Used to notify the user asynchronously of the results of the   Command execution.  
+     * method void onSuccess(String descrtiption, Bundle params) - Called when the command was completed successfully, where
+     	* param descrtiption Text description of the command result.
+	* param params Additional information if available.
 
+     * method void onError(java.lang.String error, android.os.Bundle params) - Called when the Command occurred an error, where
+     	* param error Error desciption.
+	* param params Additional information if available.
 License
 =======
 
