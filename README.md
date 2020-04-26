@@ -55,6 +55,13 @@ Commands
 * `setAirplaneModeEnabled`: Turn Airplane mode on or off.  
      * param: value - `true` to on, `false` to off
      * param: cb - `null` or `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not
+* `setClockStyle`: Set clock style on the lock screen.  
+     * param: value - `true` to on, `false` to off
+     * param: cb - `null` or `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not
+* `reboot`: Reboot the device.  
+     * param: cb - `null` or `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not   
+* `shutdown`: Turn off the device.  
+     * param: cb - `null` or `InfinitySDK.CommandCallback` object with the result of the operation: succeed or not 
      
 #### Commands use the next callback inteface:
 
