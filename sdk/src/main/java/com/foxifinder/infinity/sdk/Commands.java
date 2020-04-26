@@ -9,8 +9,8 @@ public class Commands {
     }
 
     /**
-     * Set clock style on the lock screen
-     * @param value {@code 0} to analog, {@code 1} to digital
+     * Turn Airplane mode on or off
+     * @param value {@code true} to on, {@code false} to off
      * @param cb {@link InfinitySDK.CommandCallback} object with the result of the operation:
      *                                              succeed or not
      */
@@ -19,8 +19,8 @@ public class Commands {
     }
 
     /**
-     * Turn Airplane mode on or off
-     * @param value {@code true} to on, {@code false} to off
+     * Set clock style on the lock screen
+     * @param value {@code 0} to analog, {@code 1} to digital
      * @param cb {@link InfinitySDK.CommandCallback} object with the result of the operation:
      *                                              succeed or not
      */
