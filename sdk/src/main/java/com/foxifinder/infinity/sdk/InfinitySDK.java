@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.media.MediaCodec;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -43,7 +44,7 @@ public final class InfinitySDK {
 
     /**
      * Interface definition of a callback to be invoked indicating the completion of the
-     * TextToSpeech engine initialization.
+     * InfinitySDK initialization.
      */
     public interface OnInitListener {
         /**
@@ -177,8 +178,26 @@ public final class InfinitySDK {
         }, null, "getVersion");
     }
 
+    /**
+     * Infinity callback interface. Used to notify the user asynchronously
+     * of the results of the Command execution.
+     */
     public interface CommandCallback {
+
+        /**
+         * Called when the command was completed successfully.
+         *
+         * @param descrtiption Text description of the command result.
+         * @param params Additional information if available.
+         */
         void onSuccess(String descrtiption, Bundle params);
+
+        /**
+         * Called when the Command occurred an error
+         *
+         * @param error Error desciption.
+         * @param params Additional information if available.
+         */
         void onError(String error, Bundle params);
     }
 
